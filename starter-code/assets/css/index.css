@@ -114,9 +114,15 @@ p {
 
     main .info p {
         width: 400px;
+        font-size: 25px;
+        line-height: 35px;
     }
 
     .cta button{
+        width: 200px;
+        height: 200px;
+        font-size: 28px;
+        font-weight: 600;
         margin-right: 0;
     }
 }
