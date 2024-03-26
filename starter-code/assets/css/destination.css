@@ -66,18 +66,6 @@ main{
     color: #d9d9d9;
 }
 
-.info {
-    width: 400px;
-    position: absolute;
-    right: 90px;
-}
-
-.info h1 {
-    margin-top: 60px;
-    font-size: 80px;
-    text-transform: uppercase;
-}
-
 span {
     font-size: 25px;
     margin-left: 100px;
@@ -95,7 +83,20 @@ span {
     right: 90px;
 }
 
+.info {
+    width: 380px;
+    position: absolute;
+    right: 90px;
+}
+
+.info h1 {
+    margin-top: 30px;
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
 .info p {
+    width: 420px;
     line-height: 28px;
 }
 
@@ -122,6 +123,49 @@ span {
 }
 
 img{
-    margin: -30px 40px;
-    width: 400px;
+    margin: -30px 80px;
+    width: 370px;
+}
+
+hr{
+    width: 430px;
+}
+
+.legenda {
+    width: 450px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #686868;
+    display: flex;
+    justify-content: space-between;
+}
+
+.legenda .esquerda{
+    width: 45%;
+    display: block;
+}
+
+.legenda .esquerda h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.legenda .esquerda p{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.legenda .direita{
+    width: 45%;
+    display: block;
+}
+
+.legenda .direita h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.legenda .direita p{
+    font-size: 20px;
+    text-transform: uppercase;
 }
