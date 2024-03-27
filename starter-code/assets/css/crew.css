@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../crew/background-crew-desktop.jpg');
+    padding: 0 80px;
+    color: #d9d9d9;
+}
+
+header {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo svg{
+    width: 100%;
+}
+
+nav{
+    width: 600px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #686868;
+    backdrop-filter: blur(10px);
+}
+
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu li {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    padding: 2px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.menu li a {
+    color: #d9d9d9;
+    text-decoration: none;
+    padding: 2px 15px;
+}
+
+.menu li a:hover{
+    color: #0B0D19;
+    background-color: #fff;
+    box-shadow: 2px 2px 15px #d9d9d9;
+    border-radius: 15px;
+}
+
+.professional {
+    height: 80vh;
+    display: flex;
+    position: relative;
+}
+
+.professional-info{
+    margin-left: 100px;
+}
+
+.professional-info h1{
+    margin: 10px 0 70px;
+}
+
+.professional-info h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #686868;
+}
+
+.professional-info h3{
+    font-size: 45px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.professional-info p{
+    width: 380px;
+    line-height: 2;
+    color: #d9d9d9;
+}
+
+.professional img {
+    position: absolute;
+    width: 400px;
+    bottom: 0;
+    right: 80px;
+}
+
+.professional .mission-professional-image{
+    position: absolute;
+    width: 320px;
+    bottom: 0;
+    right: 150px;
+}
