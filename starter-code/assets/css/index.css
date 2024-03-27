@@ -7,13 +7,15 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-image: url('../home/background-home-desktop.jpg');
-    padding: 0 80px;
+    background-image: url('../technology/background-technology-desktop.jpg');
+    color: #d9d9d9;
+    padding-left: 80px;
 }
 
 header {
     width: 100%;
     height: 120px;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,22 +31,28 @@ header {
     width: 100%;
 }
 
+hr {
+    position: absolute;
+    width: 33%;
+    left: 130px;
+}
+
 nav{
-    width: 600px;
+    width: 60%;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #686868;
-    backdrop-filter: blur(10px);
+    background-color: #151723;
 }
 
-ul{
+.menu{
     display: flex;
     justify-content: space-evenly;
 }
 
-ul li {
+.menu li {
     list-style: none;
     font-size: 20px;
     font-weight: 800;
@@ -54,13 +62,13 @@ ul li {
     cursor: pointer;
 }
 
-ul li a {
+.menu li a {
     color: #d9d9d9;
     text-decoration: none;
     padding: 2px 15px;
 }
 
-ul li a:hover{
+.menu li a:hover{
     color: #0B0D19;
     background-color: #fff;
     box-shadow: 2px 2px 15px #d9d9d9;
