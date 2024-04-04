@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 500); 
     
         setTimeout(function() {
+            image.classList.add("slide-up");
             image.classList.remove("fade-out");
             image.classList.add("fade-in");
 
