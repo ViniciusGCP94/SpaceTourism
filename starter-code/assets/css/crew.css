@@ -178,3 +178,7 @@ nav{
         opacity: 1;
     }
 }
+
+.blur {
+    filter: blur(5px); /* Adiciona um efeito de blur à página */
+}

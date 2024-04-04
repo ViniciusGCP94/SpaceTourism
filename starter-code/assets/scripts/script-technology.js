@@ -1,43 +1,40 @@
 document.addEventListener("DOMContentLoaded", function() {
     const currentPagePath = window.location.pathname;
-    const pageButtons = document.querySelectorAll(".menu-buttons li a"); 
-    const image = document.querySelector(".technology img");
-    const info = document.querySelector(".technology-info .info");
-
-    function setActiveButton() {
-        pageButtons.forEach(button => {
-            const buttonPath = button.getAttribute("href");
-            if (buttonPath === currentPagePath) {
-                button.classList.add('active');
-            }
-        });
-    }
-
-    setActiveButton();
-
-    function pageTransition(event) {
-        event.preventDefault();
-
-        image.classList.add("transition-effect", "fade-out");
-        info.classList.add("transition-effect", "blur-out");
-
-        const nextPage = this.getAttribute("href");
-
-        setTimeout(function() {
-            window.location.href = nextPage;
-        }, 500); 
-    
-        setTimeout(function() {
-            image.classList.add("slide-up");
-            image.classList.remove("fade-out");
-            image.classList.add("fade-in");
-
-            info.classList.remove("blur-out");
-            info.classList.add("fade-in");
-        }, 1000);
-    }
+    const pageButtons = document.querySelectorAll(".menu-buttons li a");
+    const contentContainer = document.querySelector(".technology");
+    let currentButton = null;
 
     pageButtons.forEach(button => {
-        button.addEventListener("click", pageTransition);
+        const buttonPath = button.getAttribute("href");
+        if (buttonPath === currentPagePath) {
+            button.classList.add('active');
+            currentButton = button;
+        }
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            if (this === currentButton) {
+                return; // Se o botão clicado for o mesmo que já está ativo, não faz nada
+            }
+
+            const nextPagePath = this.getAttribute("href");
+
+            // Adiciona classe de blur à página atual
+            contentContainer.classList.add('blur');
+
+            // Desloca a próxima página de baixo para cima
+            contentContainer.style.transition = "transform 0.5s ease";
+            contentContainer.style.transform = "translateY(-100vh)";
+
+            setTimeout(() => {
+                // Remove classe de blur após 0.5 segundos
+                contentContainer.classList.remove('blur');
+
+                // Redireciona para a próxima página
+                window.location.href = nextPagePath;
+            }, 500);
+
+            currentButton = this; // Atualiza o botão atual
+        });
     });
 });
